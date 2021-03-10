@@ -2,11 +2,14 @@
   <div class="col-4">
     <!-- NOTE the route contains both the name and an object to provide needed params -->
     <router-link :to="{name: 'CarDetails', params: {id: car._id}}" >
+      <div class="col">
+
       <div class="card car">
         <img class="card-img-top" :src="car.imgUrl" alt="car">
         <div class="card-body">
           <h4 class="card-title">{{car.make}} | {{car.model}}</h4>
           <p class="card-text">{{car.year}} | {{car.price}}</p>
+      </div>
         </div>
       </div>
     </router-link>

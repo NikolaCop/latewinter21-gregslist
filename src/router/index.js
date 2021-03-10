@@ -5,6 +5,8 @@ import CarsPage from '../pages/CarsPage.vue'
 import HomePage from '../pages/HomePage.vue'
 import HousesPage from '../pages/HousesPage.vue'
 import HouseDetailsPage from '../pages/HouseDetailsPage.vue'
+import JobsPage from '../pages/JobsPage.vue'
+import JobDetailsPage from '../pages/JobDetailsPage.vue'
 const routes = [
   {
     path: '/',
@@ -35,6 +37,16 @@ const routes = [
     path: '/houses/:id',
     name: 'HouseDetails',
     component: HouseDetailsPage
+  },
+  {
+    path: '/jobs',
+    name: 'Jobs',
+    component: JobsPage
+  },
+  {
+    path: '/jobs/:id',
+    name: 'JobDetails',
+    component: JobDetailsPage
   }
 ]
 

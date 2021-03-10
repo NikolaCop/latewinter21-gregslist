@@ -9,7 +9,7 @@
       <form class="form-inline" @submit.prevent="createHouse">
         <div class="form-group">
           <input
-            type="text"
+            type="number"
             name="bedrooms"
             id="bedrooms"
             class="form-control"
@@ -20,13 +20,13 @@
         </div>
         <div class="form-group">
           <input
-            type="text"
+            type="number"
             name="bathrooms"
             id="bathrooms"
             class="form-control"
             placeholder="Bathrooms"
             aria-describedby="helpId"
-            v-model="state.newHouse.model"
+            v-model="state.newHouse.bathrooms"
           />
         </div>
         <div class="form-group">
@@ -64,7 +64,7 @@
         </div>
         <div class="form-group">
           <input
-            type="text"
+            type="number"
             name="levels"
             id="levels"
             class="form-control"
@@ -97,12 +97,12 @@
 import { reactive, computed, onMounted } from 'vue'
 import { AppState } from '../Appstate'
 import { housesService } from '../services/HousesService'
-import House from '../components/Houses'
+import House from '../components/House'
 import { useRouter } from 'vue-router'
 
 export default {
   name: 'HousesPage',
-  step() {
+  setup() {
     const router = useRouter()
     const state = reactive({
       houses: computed(() => AppState.houses),

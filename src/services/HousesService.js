@@ -31,8 +31,8 @@ class HousesService {
   }
 
   async bid(id) {
-    const house = AppState.houses.find(c => c.id === id)
-    house.price += 100
+    const house = AppState.houses.find(h => h.id === id)
+    house.price += 1000
     try {
       await sandboxApi.put('houses/' + id, house)
     } catch (error) {
